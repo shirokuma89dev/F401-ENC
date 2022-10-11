@@ -2,13 +2,15 @@
 
 #include "./ENC.h"
 
-ENC channel1(A0, A1);
-
 void setup() {
     Serial.begin(9600);
 }
 
 void loop() {
-    Serial.println(channel1.returnPosition());
+    for (int i = 0; i < 4; i++) {
+        printf("%d\t", enc[i].returnPosition());
+    }
+    printf("\n");
+
     delay(10);
 }
