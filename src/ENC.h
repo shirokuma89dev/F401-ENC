@@ -7,7 +7,12 @@ class ENC {
     ENC(int A, int B);
 
     long returnPosition(void);
+    int returnVelocity(void);
+
     void counter(void);
+    void calcVelocity(void);
+
+    const uint16_t dt = 5;
 
    private:
     int A_pin;
@@ -16,6 +21,7 @@ class ENC {
     bool _val;
 
     long _position = 0;
+    int _velocity  = 0;
 };
 
 ENC enc[] = {{A0, A1}, {7, 8}, {5, 4}, {14, 15}};
@@ -37,6 +43,14 @@ long ENC::returnPosition(void) {
     return this->_position;
 }
 
+int ENC::returnVelocity(void) {
+    return this->_velocity;
+}
+
+void ENC::calcVelocity(void) {
+    //✨👉😁👈✨
+}
+
 ENC::ENC(int A, int B) {
     A_pin = A;
     B_pin = B;
@@ -47,7 +61,7 @@ ENC::ENC(int A, int B) {
     attachInterrupt(digitalPinToInterrupt(A_pin), ENC_check, CHANGE);
 }
 
-//  比メンバ関数
+//  非メンバ関数
 
 void ENC_check(void) {
     for (int i = 0; i < 4; i++) {
