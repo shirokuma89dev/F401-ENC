@@ -12,7 +12,7 @@ class ENC {
     void counter(void);
     // void calcVelocity(void);
 
-    const uint16_t dt = 5;
+    // const uint16_t dt = 5;
 
    private:
     int A_pin;
@@ -21,7 +21,7 @@ class ENC {
     bool _val;
 
     long _position = 0;
-    int _velocity  = 0;
+    // int _velocity  = 0;
 };
 
 ENC enc[] = {{A0, A1}, {7, 8}, {5, 4}, {14, 15}};
