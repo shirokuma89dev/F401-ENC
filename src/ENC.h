@@ -7,10 +7,10 @@ class ENC {
     ENC(int A, int B);
 
     long returnPosition(void);
-    int returnVelocity(void);
+    // int returnVelocity(void);
 
     void counter(void);
-    void calcVelocity(void);
+    // void calcVelocity(void);
 
     const uint16_t dt = 5;
 
@@ -43,13 +43,13 @@ long ENC::returnPosition(void) {
     return this->_position;
 }
 
-int ENC::returnVelocity(void) {
-    return this->_velocity;
-}
+// int ENC::returnVelocity(void) {
+//     return this->_velocity;
+// }
 
-void ENC::calcVelocity(void) {
-    //✨👉😁👈✨
-}
+// void ENC::calcVelocity(void) {
+//     //✨👉😁👈✨
+// }
 
 ENC::ENC(int A, int B) {
     A_pin = A;
